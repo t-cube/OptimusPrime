@@ -1,0 +1,30 @@
+/**
+ * Package for the Listeners used within the MainView.
+ */
+package gui.listener.mainview;
+
+import gui.GUIController;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+/**
+ * Action for the MainView to close it.
+ * @author Torsten Dietl
+ * @version 0.1.0
+ * @since 2015-04-01
+ */
+public class CloseAction implements ActionListener {
+	private GUIController c;
+	
+	public CloseAction(GUIController c){
+		this.c = c;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		c.disposeView("MainView");
+	}
+
+}
